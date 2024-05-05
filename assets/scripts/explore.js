@@ -25,9 +25,9 @@ function init() {
     speechSynthesis.onvoiceschanged = populateVoiceList;
   }
 
-  let btn = document.querySelector('section button');
-  let inputTxt = document.getElementById('text-to-speak');
-  let img = document.querySelector('img');
+  const btn = document.querySelector('section button');
+  const inputTxt = document.getElementById('text-to-speak');
+  const img = document.querySelector('img');
 
   btn.addEventListener('click', function () {
     const toSpeak = new SpeechSynthesisUtterance(inputTxt.value);

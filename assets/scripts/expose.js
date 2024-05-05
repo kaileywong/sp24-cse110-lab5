@@ -3,14 +3,14 @@
 window.addEventListener('DOMContentLoaded', init);
 
 function init() {
-  let select = document.getElementById('horn-select');
-  let audio = document.querySelector('audio.hidden');
-  let btn = document.querySelector('section button');
+  const select = document.getElementById('horn-select');
+  const audio = document.querySelector('audio.hidden');
+  const btn = document.querySelector('section button');
   const jsConfetti = new JSConfetti();
 
   select.addEventListener('change', function () {
-    let selected = select.value;
-    let image = document.querySelector('section img');
+    const selected = select.value;
+    const image = document.querySelector('section img');
 
     if (selected === 'air-horn') {
       image.src = './assets/images/air-horn.svg';
@@ -29,10 +29,10 @@ function init() {
     }
   });
 
-  let slider = document.getElementById('volume');
+  const slider = document.getElementById('volume');
   slider.addEventListener('change', function () {
-    let val = slider.value;
-    let image = document.querySelector('#volume-controls img');
+    const val = slider.value;
+    const image = document.querySelector('#volume-controls img');
 
     if (val == 0) {
       image.src = './assets/icons/volume-level-0.svg';
@@ -59,7 +59,4 @@ function init() {
       jsConfetti.addConfetti();
     }
   });
-  console.log(btn);
-
-
 }
